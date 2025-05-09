@@ -24,7 +24,3 @@ sse_starlette
 sseclient-py
 uvicorn
 gunicorn
-jupyter
-
-
-
