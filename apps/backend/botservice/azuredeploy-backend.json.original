@@ -44,14 +44,7 @@
       "type": "string",
       "defaultValue": "[resourceGroup().name]",
       "metadata": {
-        "description": "Required. The name of the resource group where the resources (Azure Search etc.) were deployed previously. Defaults to current resource group."
-      }
-    },
-    "resourceGroupBing": {
-      "type": "string",
-      "defaultValue": "[resourceGroup().name]",
-      "metadata": {
-        "description": "Required. The name of the resource group where the BING resource was deployed previously. Defaults to current resource group."
+        "description": "Required. The name of the resource group where the resources (Azure Search etc.) where deployed previously. Defaults to current resource group."
       }
     },
     "azureSearchName": {
@@ -318,7 +311,7 @@
             },
             {
               "name": "BING_SUBSCRIPTION_KEY",
-              "value": "[listKeys(extensionResourceId(format('/subscriptions/{0}/resourceGroups/{1}', subscription().subscriptionId, parameters('resourceGroupBing')), 'Microsoft.Bing/accounts', parameters('bingSearchName')), '2020-06-10').key1]"
+              "value": "[listKeys(extensionResourceId(format('/subscriptions/{0}/resourceGroups/{1}', subscription().subscriptionId, parameters('resourceGroupSearch')), 'Microsoft.Bing/accounts', parameters('bingSearchName')), '2020-06-10').key1]"
             },
             {
               "name": "SQL_SERVER_NAME",
